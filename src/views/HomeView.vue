@@ -22,41 +22,41 @@
         </div>
         <button type="button" class="btn btn-primary mb-3" @click="addGroup">+ Add More</button>
 
-        <div class="row mb-3">
+        <div class="row custom-margin">
           <div class="col-md-4">
             <label>Birth Date</label>
             <input v-model="form.birthDate" type="date" class="form-control" required />
           </div>
          </div> 
 
-         <div class="col-md-4">
+         <div class="col-md-4 custom-margin">
           <label class="form-label">Gender</label>
           <div class="row">
             <div class="col-6">
               <div class="form-check d-flex align-items-center gap-2">
                 <input class="form-check-input" type="radio" id="genderMale" value="Male" v-model="form.gender" />
-                <label class="form-check-label mb-0" for="genderMale">Male</label>
+                <span class="form-check-label mb-0" for="genderMale">Male</span>
               </div>
             </div>
             <div class="col-6">
               <div class="form-check d-flex align-items-center gap-2">
                 <input class="form-check-input" type="radio" id="genderFemale" value="Female" v-model="form.gender" />
-                <label class="form-check-label mb-0" for="genderFemale">Female</label>
+                <span class="form-check-label mb-0" for="genderFemale">Female</span>
               </div>
             </div>
           </div>
         </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 custom-margin">
             <label>Languages</label>
             <div class="form-check form-check-inline" v-for="lang in languages" :key="lang">
               <input class="form-check-input" type="checkbox" :value="lang" v-model="form.languages" />
-              <label class="form-check-label">{{ lang }}</label>
+              <span class="form-check-label">{{ lang }}</span>
             </div>
           </div>
        
 
-        <div class="row mb-3">
+        <div class="row custom-margin">
           <div class="col-md-6">
             <label>City</label>
             <select v-model="form.cities" class="form-select" multiple required>
@@ -389,5 +389,8 @@ h4 {
   border-right: none;
 }
 
+.custom-margin {
+margin-bottom: 10px;
+}
 
 </style>
